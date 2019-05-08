@@ -1,0 +1,6 @@
+framework module Pods_CyutOrderSystem {
+  umbrella header "Pods-CyutOrderSystem-umbrella.h"
+
+  export *
+  module * { export * }
+}

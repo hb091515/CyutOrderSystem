@@ -1,0 +1,6 @@
+framework module Pods_CyutOrderSystemTests {
+  umbrella header "Pods-CyutOrderSystemTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

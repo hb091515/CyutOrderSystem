@@ -1,0 +1,794 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		485DE32A2272AF94008B63CB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 485DE3292272AF94008B63CB /* Images.xcassets */; };
+		485DE32C2272AFC2008B63CB /* RestaurantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485DE32B2272AFC2008B63CB /* RestaurantModel.swift */; };
+		485DE32E2272B655008B63CB /* RestaurantInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485DE32D2272B655008B63CB /* RestaurantInfo.swift */; };
+		48C3FB27226B3E8E00668BCB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C3FB26226B3E8E00668BCB /* AppDelegate.swift */; };
+		48C3FB29226B3E8E00668BCB /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C3FB28226B3E8E00668BCB /* FirstViewController.swift */; };
+		48C3FB2B226B3E8E00668BCB /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C3FB2A226B3E8E00668BCB /* SecondViewController.swift */; };
+		48C3FB2E226B3E8E00668BCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48C3FB2C226B3E8E00668BCB /* Main.storyboard */; };
+		48C3FB30226B3E9000668BCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48C3FB2F226B3E9000668BCB /* Assets.xcassets */; };
+		48C3FB33226B3E9000668BCB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48C3FB31226B3E9000668BCB /* LaunchScreen.storyboard */; };
+		48C3FB3E226B3E9100668BCB /* CyutOrderSystemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C3FB3D226B3E9100668BCB /* CyutOrderSystemTests.swift */; };
+		48C3FB49226B3E9100668BCB /* CyutOrderSystemUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C3FB48226B3E9100668BCB /* CyutOrderSystemUITests.swift */; };
+		48C3FB57226B427A00668BCB /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C3FB56226B427A00668BCB /* Order.swift */; };
+		48C3FB59226B499900668BCB /* RestaurantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C3FB58226B499900668BCB /* RestaurantCell.swift */; };
+		48C3FB5B226B49C800668BCB /* RestaurantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C3FB5A226B49C800668BCB /* RestaurantTableViewController.swift */; };
+		48C3FB61226B4C0900668BCB /* ShopCartTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C3FB60226B4C0900668BCB /* ShopCartTableViewController.swift */; };
+		48C3FB65226B4C9E00668BCB /* ShopCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C3FB64226B4C9E00668BCB /* ShopCart.swift */; };
+		48C3FB67226B4EA100668BCB /* ShopCartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C3FB66226B4EA100668BCB /* ShopCartCell.swift */; };
+		9D189E06C2187CE6415EA721 /* Pods_CyutOrderSystemTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ECF5E4F362CAEA0C784E5A0 /* Pods_CyutOrderSystemTests.framework */; };
+		A093118AA01849E0FB0E57E1 /* Pods_CyutOrderSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12E5BA29063047E4F73AAD09 /* Pods_CyutOrderSystem.framework */; };
+		F8BB26B8517F0480A1A2DB9C /* Pods_CyutOrderSystemUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A389EDD44FFC74D396315CB /* Pods_CyutOrderSystemUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		48C3FB3A226B3E9100668BCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 48C3FB1B226B3E8E00668BCB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 48C3FB22226B3E8E00668BCB;
+			remoteInfo = CyutOrderSystem;
+		};
+		48C3FB45226B3E9100668BCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 48C3FB1B226B3E8E00668BCB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 48C3FB22226B3E8E00668BCB;
+			remoteInfo = CyutOrderSystem;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		12E5BA29063047E4F73AAD09 /* Pods_CyutOrderSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CyutOrderSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A389EDD44FFC74D396315CB /* Pods_CyutOrderSystemUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CyutOrderSystemUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C31DBDFBFC4FA6494A8F183 /* Pods-CyutOrderSystemTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CyutOrderSystemTests.release.xcconfig"; path = "Target Support Files/Pods-CyutOrderSystemTests/Pods-CyutOrderSystemTests.release.xcconfig"; sourceTree = "<group>"; };
+		3FF8E2C8171B9D755F2D76D4 /* Pods-CyutOrderSystemUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CyutOrderSystemUITests.debug.xcconfig"; path = "Target Support Files/Pods-CyutOrderSystemUITests/Pods-CyutOrderSystemUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		485DE3292272AF94008B63CB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "../../../Downloads/Swift Book/chapter-6/FoodPin/FoodPin/Images.xcassets"; sourceTree = "<group>"; };
+		485DE32B2272AFC2008B63CB /* RestaurantModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantModel.swift; sourceTree = "<group>"; };
+		485DE32D2272B655008B63CB /* RestaurantInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantInfo.swift; sourceTree = "<group>"; };
+		48C3FB23226B3E8E00668BCB /* CyutOrderSystem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CyutOrderSystem.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		48C3FB26226B3E8E00668BCB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		48C3FB28226B3E8E00668BCB /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		48C3FB2A226B3E8E00668BCB /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		48C3FB2D226B3E8E00668BCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		48C3FB2F226B3E9000668BCB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		48C3FB32226B3E9000668BCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		48C3FB34226B3E9000668BCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48C3FB39226B3E9100668BCB /* CyutOrderSystemTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CyutOrderSystemTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		48C3FB3D226B3E9100668BCB /* CyutOrderSystemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyutOrderSystemTests.swift; sourceTree = "<group>"; };
+		48C3FB3F226B3E9100668BCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48C3FB44226B3E9100668BCB /* CyutOrderSystemUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CyutOrderSystemUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		48C3FB48226B3E9100668BCB /* CyutOrderSystemUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyutOrderSystemUITests.swift; sourceTree = "<group>"; };
+		48C3FB4A226B3E9100668BCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48C3FB56226B427A00668BCB /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		48C3FB58226B499900668BCB /* RestaurantCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCell.swift; sourceTree = "<group>"; };
+		48C3FB5A226B49C800668BCB /* RestaurantTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewController.swift; sourceTree = "<group>"; };
+		48C3FB60226B4C0900668BCB /* ShopCartTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopCartTableViewController.swift; sourceTree = "<group>"; };
+		48C3FB64226B4C9E00668BCB /* ShopCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopCart.swift; sourceTree = "<group>"; };
+		48C3FB66226B4EA100668BCB /* ShopCartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopCartCell.swift; sourceTree = "<group>"; };
+		4ECF5E4F362CAEA0C784E5A0 /* Pods_CyutOrderSystemTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CyutOrderSystemTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		984E487F6DEC1ADE66888CE7 /* Pods-CyutOrderSystem.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CyutOrderSystem.release.xcconfig"; path = "Target Support Files/Pods-CyutOrderSystem/Pods-CyutOrderSystem.release.xcconfig"; sourceTree = "<group>"; };
+		9E6E39F3A260A0122CB54A23 /* Pods-CyutOrderSystem.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CyutOrderSystem.debug.xcconfig"; path = "Target Support Files/Pods-CyutOrderSystem/Pods-CyutOrderSystem.debug.xcconfig"; sourceTree = "<group>"; };
+		A905F14066B0CA7ECF2CA985 /* Pods-CyutOrderSystemTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CyutOrderSystemTests.debug.xcconfig"; path = "Target Support Files/Pods-CyutOrderSystemTests/Pods-CyutOrderSystemTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AB38E0D3FF9BBB78687652D9 /* Pods-CyutOrderSystemUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CyutOrderSystemUITests.release.xcconfig"; path = "Target Support Files/Pods-CyutOrderSystemUITests/Pods-CyutOrderSystemUITests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		48C3FB20226B3E8E00668BCB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A093118AA01849E0FB0E57E1 /* Pods_CyutOrderSystem.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48C3FB36226B3E9100668BCB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D189E06C2187CE6415EA721 /* Pods_CyutOrderSystemTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48C3FB41226B3E9100668BCB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8BB26B8517F0480A1A2DB9C /* Pods_CyutOrderSystemUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		25BB03D20EFE31856BE481FB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9E6E39F3A260A0122CB54A23 /* Pods-CyutOrderSystem.debug.xcconfig */,
+				984E487F6DEC1ADE66888CE7 /* Pods-CyutOrderSystem.release.xcconfig */,
+				A905F14066B0CA7ECF2CA985 /* Pods-CyutOrderSystemTests.debug.xcconfig */,
+				3C31DBDFBFC4FA6494A8F183 /* Pods-CyutOrderSystemTests.release.xcconfig */,
+				3FF8E2C8171B9D755F2D76D4 /* Pods-CyutOrderSystemUITests.debug.xcconfig */,
+				AB38E0D3FF9BBB78687652D9 /* Pods-CyutOrderSystemUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		412A0C17D15BFC5C9032C4EA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				12E5BA29063047E4F73AAD09 /* Pods_CyutOrderSystem.framework */,
+				4ECF5E4F362CAEA0C784E5A0 /* Pods_CyutOrderSystemTests.framework */,
+				1A389EDD44FFC74D396315CB /* Pods_CyutOrderSystemUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		482DE8C1226C66DB003D94B5 /* IconImage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = IconImage;
+			sourceTree = "<group>";
+		};
+		48C3FB1A226B3E8E00668BCB = {
+			isa = PBXGroup;
+			children = (
+				48C3FB25226B3E8E00668BCB /* CyutOrderSystem */,
+				48C3FB3C226B3E9100668BCB /* CyutOrderSystemTests */,
+				48C3FB47226B3E9100668BCB /* CyutOrderSystemUITests */,
+				48C3FB24226B3E8E00668BCB /* Products */,
+				25BB03D20EFE31856BE481FB /* Pods */,
+				412A0C17D15BFC5C9032C4EA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		48C3FB24226B3E8E00668BCB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				48C3FB23226B3E8E00668BCB /* CyutOrderSystem.app */,
+				48C3FB39226B3E9100668BCB /* CyutOrderSystemTests.xctest */,
+				48C3FB44226B3E9100668BCB /* CyutOrderSystemUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		48C3FB25226B3E8E00668BCB /* CyutOrderSystem */ = {
+			isa = PBXGroup;
+			children = (
+				482DE8C1226C66DB003D94B5 /* IconImage */,
+				48C3FB5F226B4BC800668BCB /* ShopCart */,
+				48C3FB5C226B4AB800668BCB /* Restaurant */,
+				48C3FB26226B3E8E00668BCB /* AppDelegate.swift */,
+				48C3FB28226B3E8E00668BCB /* FirstViewController.swift */,
+				48C3FB2A226B3E8E00668BCB /* SecondViewController.swift */,
+				48C3FB2C226B3E8E00668BCB /* Main.storyboard */,
+				48C3FB56226B427A00668BCB /* Order.swift */,
+				48C3FB2F226B3E9000668BCB /* Assets.xcassets */,
+				485DE3292272AF94008B63CB /* Images.xcassets */,
+				48C3FB31226B3E9000668BCB /* LaunchScreen.storyboard */,
+				48C3FB34226B3E9000668BCB /* Info.plist */,
+			);
+			path = CyutOrderSystem;
+			sourceTree = "<group>";
+		};
+		48C3FB3C226B3E9100668BCB /* CyutOrderSystemTests */ = {
+			isa = PBXGroup;
+			children = (
+				48C3FB3D226B3E9100668BCB /* CyutOrderSystemTests.swift */,
+				48C3FB3F226B3E9100668BCB /* Info.plist */,
+			);
+			path = CyutOrderSystemTests;
+			sourceTree = "<group>";
+		};
+		48C3FB47226B3E9100668BCB /* CyutOrderSystemUITests */ = {
+			isa = PBXGroup;
+			children = (
+				48C3FB48226B3E9100668BCB /* CyutOrderSystemUITests.swift */,
+				48C3FB4A226B3E9100668BCB /* Info.plist */,
+			);
+			path = CyutOrderSystemUITests;
+			sourceTree = "<group>";
+		};
+		48C3FB5C226B4AB800668BCB /* Restaurant */ = {
+			isa = PBXGroup;
+			children = (
+				48C3FB58226B499900668BCB /* RestaurantCell.swift */,
+				48C3FB5A226B49C800668BCB /* RestaurantTableViewController.swift */,
+				485DE32B2272AFC2008B63CB /* RestaurantModel.swift */,
+				485DE32D2272B655008B63CB /* RestaurantInfo.swift */,
+			);
+			path = Restaurant;
+			sourceTree = "<group>";
+		};
+		48C3FB5F226B4BC800668BCB /* ShopCart */ = {
+			isa = PBXGroup;
+			children = (
+				48C3FB60226B4C0900668BCB /* ShopCartTableViewController.swift */,
+				48C3FB64226B4C9E00668BCB /* ShopCart.swift */,
+				48C3FB66226B4EA100668BCB /* ShopCartCell.swift */,
+			);
+			path = ShopCart;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		48C3FB22226B3E8E00668BCB /* CyutOrderSystem */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 48C3FB4D226B3E9100668BCB /* Build configuration list for PBXNativeTarget "CyutOrderSystem" */;
+			buildPhases = (
+				7DB11393671C11DEA34C451F /* [CP] Check Pods Manifest.lock */,
+				48C3FB1F226B3E8E00668BCB /* Sources */,
+				48C3FB20226B3E8E00668BCB /* Frameworks */,
+				48C3FB21226B3E8E00668BCB /* Resources */,
+				AE13B38225C23910F754ACBD /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CyutOrderSystem;
+			productName = CyutOrderSystem;
+			productReference = 48C3FB23226B3E8E00668BCB /* CyutOrderSystem.app */;
+			productType = "com.apple.product-type.application";
+		};
+		48C3FB38226B3E9100668BCB /* CyutOrderSystemTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 48C3FB50226B3E9100668BCB /* Build configuration list for PBXNativeTarget "CyutOrderSystemTests" */;
+			buildPhases = (
+				181DE4F1C2E6E64800B753DD /* [CP] Check Pods Manifest.lock */,
+				48C3FB35226B3E9100668BCB /* Sources */,
+				48C3FB36226B3E9100668BCB /* Frameworks */,
+				48C3FB37226B3E9100668BCB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				48C3FB3B226B3E9100668BCB /* PBXTargetDependency */,
+			);
+			name = CyutOrderSystemTests;
+			productName = CyutOrderSystemTests;
+			productReference = 48C3FB39226B3E9100668BCB /* CyutOrderSystemTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		48C3FB43226B3E9100668BCB /* CyutOrderSystemUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 48C3FB53226B3E9100668BCB /* Build configuration list for PBXNativeTarget "CyutOrderSystemUITests" */;
+			buildPhases = (
+				846EB40AACAF9D65037830B3 /* [CP] Check Pods Manifest.lock */,
+				48C3FB40226B3E9100668BCB /* Sources */,
+				48C3FB41226B3E9100668BCB /* Frameworks */,
+				48C3FB42226B3E9100668BCB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				48C3FB46226B3E9100668BCB /* PBXTargetDependency */,
+			);
+			name = CyutOrderSystemUITests;
+			productName = CyutOrderSystemUITests;
+			productReference = 48C3FB44226B3E9100668BCB /* CyutOrderSystemUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		48C3FB1B226B3E8E00668BCB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = yacheng;
+				TargetAttributes = {
+					48C3FB22226B3E8E00668BCB = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					48C3FB38226B3E9100668BCB = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 48C3FB22226B3E8E00668BCB;
+					};
+					48C3FB43226B3E9100668BCB = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 48C3FB22226B3E8E00668BCB;
+					};
+				};
+			};
+			buildConfigurationList = 48C3FB1E226B3E8E00668BCB /* Build configuration list for PBXProject "CyutOrderSystem" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 48C3FB1A226B3E8E00668BCB;
+			productRefGroup = 48C3FB24226B3E8E00668BCB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				48C3FB22226B3E8E00668BCB /* CyutOrderSystem */,
+				48C3FB38226B3E9100668BCB /* CyutOrderSystemTests */,
+				48C3FB43226B3E9100668BCB /* CyutOrderSystemUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		48C3FB21226B3E8E00668BCB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48C3FB33226B3E9000668BCB /* LaunchScreen.storyboard in Resources */,
+				485DE32A2272AF94008B63CB /* Images.xcassets in Resources */,
+				48C3FB30226B3E9000668BCB /* Assets.xcassets in Resources */,
+				48C3FB2E226B3E8E00668BCB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48C3FB37226B3E9100668BCB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48C3FB42226B3E9100668BCB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		181DE4F1C2E6E64800B753DD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CyutOrderSystemTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7DB11393671C11DEA34C451F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CyutOrderSystem-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		846EB40AACAF9D65037830B3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CyutOrderSystemUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE13B38225C23910F754ACBD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CyutOrderSystem/Pods-CyutOrderSystem-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CyutOrderSystem/Pods-CyutOrderSystem-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		48C3FB1F226B3E8E00668BCB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48C3FB59226B499900668BCB /* RestaurantCell.swift in Sources */,
+				48C3FB67226B4EA100668BCB /* ShopCartCell.swift in Sources */,
+				48C3FB2B226B3E8E00668BCB /* SecondViewController.swift in Sources */,
+				485DE32E2272B655008B63CB /* RestaurantInfo.swift in Sources */,
+				48C3FB5B226B49C800668BCB /* RestaurantTableViewController.swift in Sources */,
+				485DE32C2272AFC2008B63CB /* RestaurantModel.swift in Sources */,
+				48C3FB27226B3E8E00668BCB /* AppDelegate.swift in Sources */,
+				48C3FB65226B4C9E00668BCB /* ShopCart.swift in Sources */,
+				48C3FB61226B4C0900668BCB /* ShopCartTableViewController.swift in Sources */,
+				48C3FB57226B427A00668BCB /* Order.swift in Sources */,
+				48C3FB29226B3E8E00668BCB /* FirstViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48C3FB35226B3E9100668BCB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48C3FB3E226B3E9100668BCB /* CyutOrderSystemTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48C3FB40226B3E9100668BCB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48C3FB49226B3E9100668BCB /* CyutOrderSystemUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		48C3FB3B226B3E9100668BCB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 48C3FB22226B3E8E00668BCB /* CyutOrderSystem */;
+			targetProxy = 48C3FB3A226B3E9100668BCB /* PBXContainerItemProxy */;
+		};
+		48C3FB46226B3E9100668BCB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 48C3FB22226B3E8E00668BCB /* CyutOrderSystem */;
+			targetProxy = 48C3FB45226B3E9100668BCB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		48C3FB2C226B3E8E00668BCB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				48C3FB2D226B3E8E00668BCB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		48C3FB31226B3E9000668BCB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				48C3FB32226B3E9000668BCB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		48C3FB4B226B3E9100668BCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		48C3FB4C226B3E9100668BCB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		48C3FB4E226B3E9100668BCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E6E39F3A260A0122CB54A23 /* Pods-CyutOrderSystem.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CyutOrderSystem/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = owner.CyutOrderSystem;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		48C3FB4F226B3E9100668BCB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 984E487F6DEC1ADE66888CE7 /* Pods-CyutOrderSystem.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CyutOrderSystem/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = owner.CyutOrderSystem;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		48C3FB51226B3E9100668BCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A905F14066B0CA7ECF2CA985 /* Pods-CyutOrderSystemTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CyutOrderSystemTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = owner.CyutOrderSystemTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CyutOrderSystem.app/CyutOrderSystem";
+			};
+			name = Debug;
+		};
+		48C3FB52226B3E9100668BCB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C31DBDFBFC4FA6494A8F183 /* Pods-CyutOrderSystemTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CyutOrderSystemTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = owner.CyutOrderSystemTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CyutOrderSystem.app/CyutOrderSystem";
+			};
+			name = Release;
+		};
+		48C3FB54226B3E9100668BCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3FF8E2C8171B9D755F2D76D4 /* Pods-CyutOrderSystemUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CyutOrderSystemUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = owner.CyutOrderSystemUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CyutOrderSystem;
+			};
+			name = Debug;
+		};
+		48C3FB55226B3E9100668BCB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB38E0D3FF9BBB78687652D9 /* Pods-CyutOrderSystemUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CyutOrderSystemUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = owner.CyutOrderSystemUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CyutOrderSystem;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		48C3FB1E226B3E8E00668BCB /* Build configuration list for PBXProject "CyutOrderSystem" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48C3FB4B226B3E9100668BCB /* Debug */,
+				48C3FB4C226B3E9100668BCB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		48C3FB4D226B3E9100668BCB /* Build configuration list for PBXNativeTarget "CyutOrderSystem" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48C3FB4E226B3E9100668BCB /* Debug */,
+				48C3FB4F226B3E9100668BCB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		48C3FB50226B3E9100668BCB /* Build configuration list for PBXNativeTarget "CyutOrderSystemTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48C3FB51226B3E9100668BCB /* Debug */,
+				48C3FB52226B3E9100668BCB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		48C3FB53226B3E9100668BCB /* Build configuration list for PBXNativeTarget "CyutOrderSystemUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48C3FB54226B3E9100668BCB /* Debug */,
+				48C3FB55226B3E9100668BCB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 48C3FB1B226B3E8E00668BCB /* Project object */;
+}
