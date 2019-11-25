@@ -7,23 +7,63 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48088B7022828BB6003ECB87 /* RouletteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48088B6F22828BB6003ECB87 /* RouletteViewController.swift */; };
 		485DE32A2272AF94008B63CB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 485DE3292272AF94008B63CB /* Images.xcassets */; };
-		485DE32C2272AFC2008B63CB /* RestaurantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485DE32B2272AFC2008B63CB /* RestaurantModel.swift */; };
 		485DE32E2272B655008B63CB /* RestaurantInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485DE32D2272B655008B63CB /* RestaurantInfo.swift */; };
+		486207C82282A6EF006FCA1E /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486207C72282A6EF006FCA1E /* TabBarController.swift */; };
 		48C3FB27226B3E8E00668BCB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C3FB26226B3E8E00668BCB /* AppDelegate.swift */; };
-		48C3FB29226B3E8E00668BCB /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C3FB28226B3E8E00668BCB /* FirstViewController.swift */; };
-		48C3FB2B226B3E8E00668BCB /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C3FB2A226B3E8E00668BCB /* SecondViewController.swift */; };
 		48C3FB2E226B3E8E00668BCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48C3FB2C226B3E8E00668BCB /* Main.storyboard */; };
 		48C3FB30226B3E9000668BCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48C3FB2F226B3E9000668BCB /* Assets.xcassets */; };
 		48C3FB33226B3E9000668BCB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48C3FB31226B3E9000668BCB /* LaunchScreen.storyboard */; };
 		48C3FB3E226B3E9100668BCB /* CyutOrderSystemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C3FB3D226B3E9100668BCB /* CyutOrderSystemTests.swift */; };
 		48C3FB49226B3E9100668BCB /* CyutOrderSystemUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C3FB48226B3E9100668BCB /* CyutOrderSystemUITests.swift */; };
-		48C3FB57226B427A00668BCB /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C3FB56226B427A00668BCB /* Order.swift */; };
-		48C3FB59226B499900668BCB /* RestaurantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C3FB58226B499900668BCB /* RestaurantCell.swift */; };
-		48C3FB5B226B49C800668BCB /* RestaurantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C3FB5A226B49C800668BCB /* RestaurantTableViewController.swift */; };
-		48C3FB61226B4C0900668BCB /* ShopCartTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C3FB60226B4C0900668BCB /* ShopCartTableViewController.swift */; };
-		48C3FB65226B4C9E00668BCB /* ShopCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C3FB64226B4C9E00668BCB /* ShopCart.swift */; };
+		48C3FB57226B427A00668BCB /* SalesOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C3FB56226B427A00668BCB /* SalesOrder.swift */; };
+		48C3FB65226B4C9E00668BCB /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C3FB64226B4C9E00668BCB /* Cart.swift */; };
 		48C3FB67226B4EA100668BCB /* ShopCartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C3FB66226B4EA100668BCB /* ShopCartCell.swift */; };
+		48CD0B41234B6AE2002537D5 /* PingFang Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 48CD0B3B234B6AE1002537D5 /* PingFang Bold.ttf */; };
+		48CD0B42234B6AE2002537D5 /* PingFang Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 48CD0B3B234B6AE1002537D5 /* PingFang Bold.ttf */; };
+		48CD0B43234B6AE2002537D5 /* PingFang Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 48CD0B3B234B6AE1002537D5 /* PingFang Bold.ttf */; };
+		48CD0B44234B6AE2002537D5 /* PingFang Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 48CD0B3C234B6AE1002537D5 /* PingFang Light.ttf */; };
+		48CD0B45234B6AE2002537D5 /* PingFang Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 48CD0B3C234B6AE1002537D5 /* PingFang Light.ttf */; };
+		48CD0B46234B6AE2002537D5 /* PingFang Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 48CD0B3C234B6AE1002537D5 /* PingFang Light.ttf */; };
+		48CD0B47234B6AE2002537D5 /* PingFang Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 48CD0B3D234B6AE1002537D5 /* PingFang Medium.ttf */; };
+		48CD0B48234B6AE2002537D5 /* PingFang Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 48CD0B3D234B6AE1002537D5 /* PingFang Medium.ttf */; };
+		48CD0B49234B6AE2002537D5 /* PingFang Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 48CD0B3D234B6AE1002537D5 /* PingFang Medium.ttf */; };
+		48CD0B4A234B6AE2002537D5 /* PingFang ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 48CD0B3E234B6AE1002537D5 /* PingFang ExtraLight.ttf */; };
+		48CD0B4B234B6AE2002537D5 /* PingFang ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 48CD0B3E234B6AE1002537D5 /* PingFang ExtraLight.ttf */; };
+		48CD0B4C234B6AE2002537D5 /* PingFang ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 48CD0B3E234B6AE1002537D5 /* PingFang ExtraLight.ttf */; };
+		48CD0B4D234B6AE2002537D5 /* PingFang Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 48CD0B3F234B6AE1002537D5 /* PingFang Regular.ttf */; };
+		48CD0B4E234B6AE2002537D5 /* PingFang Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 48CD0B3F234B6AE1002537D5 /* PingFang Regular.ttf */; };
+		48CD0B4F234B6AE2002537D5 /* PingFang Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 48CD0B3F234B6AE1002537D5 /* PingFang Regular.ttf */; };
+		48CD0B50234B6AE2002537D5 /* PingFang Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 48CD0B40234B6AE1002537D5 /* PingFang Heavy.ttf */; };
+		48CD0B51234B6AE2002537D5 /* PingFang Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 48CD0B40234B6AE1002537D5 /* PingFang Heavy.ttf */; };
+		48CD0B52234B6AE2002537D5 /* PingFang Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 48CD0B40234B6AE1002537D5 /* PingFang Heavy.ttf */; };
+		48CE4ABB2309140F0000831D /* Restaurant_model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CE4ABA2309140F0000831D /* Restaurant_model.swift */; };
+		48E4F15022CB257900D879CE /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E4F14F22CB257900D879CE /* LoginController.swift */; };
+		48E8B6E222BE100B00FA4A2F /* OrderHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E8B6E122BE100B00FA4A2F /* OrderHeader.swift */; };
+		48EAACCC234CD01800E6BD29 /* RestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EAACCB234CD01800E6BD29 /* RestaurantViewController.swift */; };
+		48EAACCF234CD0EE00E6BD29 /* RestaurantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EAACCD234CD0EE00E6BD29 /* RestaurantCell.swift */; };
+		48EAACD0234CD0EE00E6BD29 /* RestaurantCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48EAACCE234CD0EE00E6BD29 /* RestaurantCell.xib */; };
+		48EAACD3234CD11C00E6BD29 /* RestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EAACD1234CD11C00E6BD29 /* RestCollectionViewCell.swift */; };
+		48EAACD4234CD11C00E6BD29 /* RestCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48EAACD2234CD11C00E6BD29 /* RestCollectionViewCell.xib */; };
+		48EADFD722B4E95C004D7BCC /* ShopCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EADFD622B4E95C004D7BCC /* ShopCartViewController.swift */; };
+		48EB1A6E238C381D00AC7E69 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EB1A6D238C381D00AC7E69 /* SearchTableViewCell.swift */; };
+		48EBC71E238A0D3600DE3904 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EBC71D238A0D3600DE3904 /* Member.swift */; };
+		48EBC720238A366F00DE3904 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EBC71F238A366F00DE3904 /* SearchViewController.swift */; };
+		48EBC722238ACE4400DE3904 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EBC721238ACE4400DE3904 /* SignupViewController.swift */; };
+		48EBC724238ACEA600DE3904 /* SignupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EBC723238ACEA600DE3904 /* SignupTableViewCell.swift */; };
+		48EDAC7A22C0B08800F16FAA /* WorkOrderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EDAC7922C0B08800F16FAA /* WorkOrderItem.swift */; };
+		48EE6B3F22E6F05C00B2C32D /* MemberController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EE6B3E22E6F05C00B2C32D /* MemberController.swift */; };
+		48EE7F36236FC5B0004634B2 /* MemberData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EE7F35236FC5B0004634B2 /* MemberData.swift */; };
+		48EED51B237921B90065541D /* MemberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EED51A237921B90065541D /* MemberCell.swift */; };
+		48EF82E322AF45F400AF9919 /* RestaurantInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EF82E222AF45F400AF9919 /* RestaurantInfoCell.swift */; };
+		48EF82E522AF501500AF9919 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EF82E422AF501500AF9919 /* Meal.swift */; };
+		48EFF32222BBA21800A5F658 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 48EFF32122BBA21800A5F658 /* GoogleService-Info.plist */; };
+		48F0B65222B8849F00C976BB /* OrderRecordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F0B65122B8849F00C976BB /* OrderRecordController.swift */; };
+		48F0B65422B884C000C976BB /* OrderRecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F0B65322B884C000C976BB /* OrderRecordCell.swift */; };
+		48F0B65622B889AE00C976BB /* OrderRecord .swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F0B65522B889AE00C976BB /* OrderRecord .swift */; };
+		48F0B65822B8986300C976BB /* SalesOredrDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F0B65722B8986300C976BB /* SalesOredrDetailViewController.swift */; };
+		48F0B65A22B89BE600C976BB /* OrderItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F0B65922B89BE600C976BB /* OrderItemCell.swift */; };
 		9D189E06C2187CE6415EA721 /* Pods_CyutOrderSystemTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ECF5E4F362CAEA0C784E5A0 /* Pods_CyutOrderSystemTests.framework */; };
 		A093118AA01849E0FB0E57E1 /* Pods_CyutOrderSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12E5BA29063047E4F73AAD09 /* Pods_CyutOrderSystem.framework */; };
 		F8BB26B8517F0480A1A2DB9C /* Pods_CyutOrderSystemUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A389EDD44FFC74D396315CB /* Pods_CyutOrderSystemUITests.framework */; };
@@ -51,13 +91,12 @@
 		1A389EDD44FFC74D396315CB /* Pods_CyutOrderSystemUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CyutOrderSystemUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C31DBDFBFC4FA6494A8F183 /* Pods-CyutOrderSystemTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CyutOrderSystemTests.release.xcconfig"; path = "Target Support Files/Pods-CyutOrderSystemTests/Pods-CyutOrderSystemTests.release.xcconfig"; sourceTree = "<group>"; };
 		3FF8E2C8171B9D755F2D76D4 /* Pods-CyutOrderSystemUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CyutOrderSystemUITests.debug.xcconfig"; path = "Target Support Files/Pods-CyutOrderSystemUITests/Pods-CyutOrderSystemUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		48088B6F22828BB6003ECB87 /* RouletteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouletteViewController.swift; sourceTree = "<group>"; };
 		485DE3292272AF94008B63CB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "../../../Downloads/Swift Book/chapter-6/FoodPin/FoodPin/Images.xcassets"; sourceTree = "<group>"; };
-		485DE32B2272AFC2008B63CB /* RestaurantModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantModel.swift; sourceTree = "<group>"; };
 		485DE32D2272B655008B63CB /* RestaurantInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantInfo.swift; sourceTree = "<group>"; };
+		486207C72282A6EF006FCA1E /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		48C3FB23226B3E8E00668BCB /* CyutOrderSystem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CyutOrderSystem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48C3FB26226B3E8E00668BCB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		48C3FB28226B3E8E00668BCB /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		48C3FB2A226B3E8E00668BCB /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		48C3FB2D226B3E8E00668BCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		48C3FB2F226B3E9000668BCB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		48C3FB32226B3E9000668BCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -68,12 +107,41 @@
 		48C3FB44226B3E9100668BCB /* CyutOrderSystemUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CyutOrderSystemUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		48C3FB48226B3E9100668BCB /* CyutOrderSystemUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyutOrderSystemUITests.swift; sourceTree = "<group>"; };
 		48C3FB4A226B3E9100668BCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		48C3FB56226B427A00668BCB /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
-		48C3FB58226B499900668BCB /* RestaurantCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCell.swift; sourceTree = "<group>"; };
-		48C3FB5A226B49C800668BCB /* RestaurantTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewController.swift; sourceTree = "<group>"; };
-		48C3FB60226B4C0900668BCB /* ShopCartTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopCartTableViewController.swift; sourceTree = "<group>"; };
-		48C3FB64226B4C9E00668BCB /* ShopCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopCart.swift; sourceTree = "<group>"; };
+		48C3FB56226B427A00668BCB /* SalesOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesOrder.swift; sourceTree = "<group>"; };
+		48C3FB64226B4C9E00668BCB /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
 		48C3FB66226B4EA100668BCB /* ShopCartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopCartCell.swift; sourceTree = "<group>"; };
+		48CD0B3B234B6AE1002537D5 /* PingFang Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PingFang Bold.ttf"; path = "../../../../Downloads/蘋方體/PingFang Bold.ttf"; sourceTree = "<group>"; };
+		48CD0B3C234B6AE1002537D5 /* PingFang Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PingFang Light.ttf"; path = "../../../../Downloads/蘋方體/PingFang Light.ttf"; sourceTree = "<group>"; };
+		48CD0B3D234B6AE1002537D5 /* PingFang Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PingFang Medium.ttf"; path = "../../../../Downloads/蘋方體/PingFang Medium.ttf"; sourceTree = "<group>"; };
+		48CD0B3E234B6AE1002537D5 /* PingFang ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PingFang ExtraLight.ttf"; path = "../../../../Downloads/蘋方體/PingFang ExtraLight.ttf"; sourceTree = "<group>"; };
+		48CD0B3F234B6AE1002537D5 /* PingFang Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PingFang Regular.ttf"; path = "../../../../Downloads/蘋方體/PingFang Regular.ttf"; sourceTree = "<group>"; };
+		48CD0B40234B6AE1002537D5 /* PingFang Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PingFang Heavy.ttf"; path = "../../../../Downloads/蘋方體/PingFang Heavy.ttf"; sourceTree = "<group>"; };
+		48CE4ABA2309140F0000831D /* Restaurant_model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant_model.swift; sourceTree = "<group>"; };
+		48E4F14F22CB257900D879CE /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		48E8B6E122BE100B00FA4A2F /* OrderHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderHeader.swift; sourceTree = "<group>"; };
+		48EAACCB234CD01800E6BD29 /* RestaurantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewController.swift; sourceTree = "<group>"; };
+		48EAACCD234CD0EE00E6BD29 /* RestaurantCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCell.swift; sourceTree = "<group>"; };
+		48EAACCE234CD0EE00E6BD29 /* RestaurantCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestaurantCell.xib; sourceTree = "<group>"; };
+		48EAACD1234CD11C00E6BD29 /* RestCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestCollectionViewCell.swift; sourceTree = "<group>"; };
+		48EAACD2234CD11C00E6BD29 /* RestCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestCollectionViewCell.xib; sourceTree = "<group>"; };
+		48EADFD622B4E95C004D7BCC /* ShopCartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopCartViewController.swift; sourceTree = "<group>"; };
+		48EB1A6D238C381D00AC7E69 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		48EBC71D238A0D3600DE3904 /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
+		48EBC71F238A366F00DE3904 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		48EBC721238ACE4400DE3904 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		48EBC723238ACEA600DE3904 /* SignupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupTableViewCell.swift; sourceTree = "<group>"; };
+		48EDAC7922C0B08800F16FAA /* WorkOrderItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkOrderItem.swift; sourceTree = "<group>"; };
+		48EE6B3E22E6F05C00B2C32D /* MemberController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberController.swift; sourceTree = "<group>"; };
+		48EE7F35236FC5B0004634B2 /* MemberData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberData.swift; sourceTree = "<group>"; };
+		48EED51A237921B90065541D /* MemberCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberCell.swift; sourceTree = "<group>"; };
+		48EF82E222AF45F400AF9919 /* RestaurantInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantInfoCell.swift; sourceTree = "<group>"; };
+		48EF82E422AF501500AF9919 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
+		48EFF32122BBA21800A5F658 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		48F0B65122B8849F00C976BB /* OrderRecordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderRecordController.swift; sourceTree = "<group>"; };
+		48F0B65322B884C000C976BB /* OrderRecordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderRecordCell.swift; sourceTree = "<group>"; };
+		48F0B65522B889AE00C976BB /* OrderRecord .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OrderRecord .swift"; sourceTree = "<group>"; };
+		48F0B65722B8986300C976BB /* SalesOredrDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesOredrDetailViewController.swift; sourceTree = "<group>"; };
+		48F0B65922B89BE600C976BB /* OrderItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderItemCell.swift; sourceTree = "<group>"; };
 		4ECF5E4F362CAEA0C784E5A0 /* Pods_CyutOrderSystemTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CyutOrderSystemTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		984E487F6DEC1ADE66888CE7 /* Pods-CyutOrderSystem.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CyutOrderSystem.release.xcconfig"; path = "Target Support Files/Pods-CyutOrderSystem/Pods-CyutOrderSystem.release.xcconfig"; sourceTree = "<group>"; };
 		9E6E39F3A260A0122CB54A23 /* Pods-CyutOrderSystem.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CyutOrderSystem.debug.xcconfig"; path = "Target Support Files/Pods-CyutOrderSystem/Pods-CyutOrderSystem.debug.xcconfig"; sourceTree = "<group>"; };
@@ -132,13 +200,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		482DE8C1226C66DB003D94B5 /* IconImage */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = IconImage;
-			sourceTree = "<group>";
-		};
 		48C3FB1A226B3E8E00668BCB = {
 			isa = PBXGroup;
 			children = (
@@ -164,18 +225,18 @@
 		48C3FB25226B3E8E00668BCB /* CyutOrderSystem */ = {
 			isa = PBXGroup;
 			children = (
-				482DE8C1226C66DB003D94B5 /* IconImage */,
-				48C3FB5F226B4BC800668BCB /* ShopCart */,
-				48C3FB5C226B4AB800668BCB /* Restaurant */,
+				48CD0B3A234B6ACA002537D5 /* Fonts */,
+				48FABA172303D05B00BB4CE1 /* Storyboard */,
+				48EF82E122AF45BD00AF9919 /* Model */,
+				48C3FB5F226B4BC800668BCB /* View */,
+				48C3FB5C226B4AB800668BCB /* View Controller */,
 				48C3FB26226B3E8E00668BCB /* AppDelegate.swift */,
-				48C3FB28226B3E8E00668BCB /* FirstViewController.swift */,
-				48C3FB2A226B3E8E00668BCB /* SecondViewController.swift */,
-				48C3FB2C226B3E8E00668BCB /* Main.storyboard */,
-				48C3FB56226B427A00668BCB /* Order.swift */,
+				48C3FB34226B3E9000668BCB /* Info.plist */,
 				48C3FB2F226B3E9000668BCB /* Assets.xcassets */,
 				485DE3292272AF94008B63CB /* Images.xcassets */,
-				48C3FB31226B3E9000668BCB /* LaunchScreen.storyboard */,
-				48C3FB34226B3E9000668BCB /* Info.plist */,
+				48088B6F22828BB6003ECB87 /* RouletteViewController.swift */,
+				486207C72282A6EF006FCA1E /* TabBarController.swift */,
+				48EFF32122BBA21800A5F658 /* GoogleService-Info.plist */,
 			);
 			path = CyutOrderSystem;
 			sourceTree = "<group>";
@@ -198,25 +259,77 @@
 			path = CyutOrderSystemUITests;
 			sourceTree = "<group>";
 		};
-		48C3FB5C226B4AB800668BCB /* Restaurant */ = {
+		48C3FB5C226B4AB800668BCB /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
-				48C3FB58226B499900668BCB /* RestaurantCell.swift */,
-				48C3FB5A226B49C800668BCB /* RestaurantTableViewController.swift */,
-				485DE32B2272AFC2008B63CB /* RestaurantModel.swift */,
 				485DE32D2272B655008B63CB /* RestaurantInfo.swift */,
+				48EADFD622B4E95C004D7BCC /* ShopCartViewController.swift */,
+				48F0B65122B8849F00C976BB /* OrderRecordController.swift */,
+				48F0B65722B8986300C976BB /* SalesOredrDetailViewController.swift */,
+				48E4F14F22CB257900D879CE /* LoginController.swift */,
+				48EE6B3E22E6F05C00B2C32D /* MemberController.swift */,
+				48EAACCB234CD01800E6BD29 /* RestaurantViewController.swift */,
+				48EBC71F238A366F00DE3904 /* SearchViewController.swift */,
+				48EBC721238ACE4400DE3904 /* SignupViewController.swift */,
 			);
-			path = Restaurant;
+			path = "View Controller";
 			sourceTree = "<group>";
 		};
-		48C3FB5F226B4BC800668BCB /* ShopCart */ = {
+		48C3FB5F226B4BC800668BCB /* View */ = {
 			isa = PBXGroup;
 			children = (
-				48C3FB60226B4C0900668BCB /* ShopCartTableViewController.swift */,
-				48C3FB64226B4C9E00668BCB /* ShopCart.swift */,
+				48EF82E222AF45F400AF9919 /* RestaurantInfoCell.swift */,
 				48C3FB66226B4EA100668BCB /* ShopCartCell.swift */,
+				48F0B65322B884C000C976BB /* OrderRecordCell.swift */,
+				48F0B65922B89BE600C976BB /* OrderItemCell.swift */,
+				48EAACCD234CD0EE00E6BD29 /* RestaurantCell.swift */,
+				48EAACCE234CD0EE00E6BD29 /* RestaurantCell.xib */,
+				48EAACD1234CD11C00E6BD29 /* RestCollectionViewCell.swift */,
+				48EAACD2234CD11C00E6BD29 /* RestCollectionViewCell.xib */,
+				48EED51A237921B90065541D /* MemberCell.swift */,
+				48EBC723238ACEA600DE3904 /* SignupTableViewCell.swift */,
+				48EB1A6D238C381D00AC7E69 /* SearchTableViewCell.swift */,
 			);
-			path = ShopCart;
+			path = View;
+			sourceTree = "<group>";
+		};
+		48CD0B3A234B6ACA002537D5 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				48CD0B3B234B6AE1002537D5 /* PingFang Bold.ttf */,
+				48CD0B3E234B6AE1002537D5 /* PingFang ExtraLight.ttf */,
+				48CD0B40234B6AE1002537D5 /* PingFang Heavy.ttf */,
+				48CD0B3C234B6AE1002537D5 /* PingFang Light.ttf */,
+				48CD0B3D234B6AE1002537D5 /* PingFang Medium.ttf */,
+				48CD0B3F234B6AE1002537D5 /* PingFang Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		48EF82E122AF45BD00AF9919 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				48C3FB64226B4C9E00668BCB /* Cart.swift */,
+				48EF82E422AF501500AF9919 /* Meal.swift */,
+				48C3FB56226B427A00668BCB /* SalesOrder.swift */,
+				48F0B65522B889AE00C976BB /* OrderRecord .swift */,
+				48E8B6E122BE100B00FA4A2F /* OrderHeader.swift */,
+				48EDAC7922C0B08800F16FAA /* WorkOrderItem.swift */,
+				48CE4ABA2309140F0000831D /* Restaurant_model.swift */,
+				48EE7F35236FC5B0004634B2 /* MemberData.swift */,
+				48EBC71D238A0D3600DE3904 /* Member.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		48FABA172303D05B00BB4CE1 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				48C3FB2C226B3E8E00668BCB /* Main.storyboard */,
+				48C3FB31226B3E9000668BCB /* LaunchScreen.storyboard */,
+			);
+			name = Storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,8 +442,17 @@
 			files = (
 				48C3FB33226B3E9000668BCB /* LaunchScreen.storyboard in Resources */,
 				485DE32A2272AF94008B63CB /* Images.xcassets in Resources */,
+				48CD0B47234B6AE2002537D5 /* PingFang Medium.ttf in Resources */,
+				48EAACD4234CD11C00E6BD29 /* RestCollectionViewCell.xib in Resources */,
+				48CD0B4A234B6AE2002537D5 /* PingFang ExtraLight.ttf in Resources */,
+				48EFF32222BBA21800A5F658 /* GoogleService-Info.plist in Resources */,
 				48C3FB30226B3E9000668BCB /* Assets.xcassets in Resources */,
+				48CD0B50234B6AE2002537D5 /* PingFang Heavy.ttf in Resources */,
+				48CD0B41234B6AE2002537D5 /* PingFang Bold.ttf in Resources */,
+				48EAACD0234CD0EE00E6BD29 /* RestaurantCell.xib in Resources */,
 				48C3FB2E226B3E8E00668BCB /* Main.storyboard in Resources */,
+				48CD0B4D234B6AE2002537D5 /* PingFang Regular.ttf in Resources */,
+				48CD0B44234B6AE2002537D5 /* PingFang Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +460,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48CD0B45234B6AE2002537D5 /* PingFang Light.ttf in Resources */,
+				48CD0B4B234B6AE2002537D5 /* PingFang ExtraLight.ttf in Resources */,
+				48CD0B48234B6AE2002537D5 /* PingFang Medium.ttf in Resources */,
+				48CD0B51234B6AE2002537D5 /* PingFang Heavy.ttf in Resources */,
+				48CD0B4E234B6AE2002537D5 /* PingFang Regular.ttf in Resources */,
+				48CD0B42234B6AE2002537D5 /* PingFang Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +473,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48CD0B46234B6AE2002537D5 /* PingFang Light.ttf in Resources */,
+				48CD0B4C234B6AE2002537D5 /* PingFang ExtraLight.ttf in Resources */,
+				48CD0B49234B6AE2002537D5 /* PingFang Medium.ttf in Resources */,
+				48CD0B52234B6AE2002537D5 /* PingFang Heavy.ttf in Resources */,
+				48CD0B4F234B6AE2002537D5 /* PingFang Regular.ttf in Resources */,
+				48CD0B43234B6AE2002537D5 /* PingFang Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,16 +561,28 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-CyutOrderSystem/Pods-CyutOrderSystem-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/TextFieldEffects/TextFieldEffects.framework",
+				"${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TextFieldEffects.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLPagerTabStrip.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -450,17 +596,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48C3FB59226B499900668BCB /* RestaurantCell.swift in Sources */,
+				48EBC724238ACEA600DE3904 /* SignupTableViewCell.swift in Sources */,
+				48EF82E322AF45F400AF9919 /* RestaurantInfoCell.swift in Sources */,
+				48EADFD722B4E95C004D7BCC /* ShopCartViewController.swift in Sources */,
+				48EAACD3234CD11C00E6BD29 /* RestCollectionViewCell.swift in Sources */,
+				48EBC720238A366F00DE3904 /* SearchViewController.swift in Sources */,
+				48EBC71E238A0D3600DE3904 /* Member.swift in Sources */,
+				48EDAC7A22C0B08800F16FAA /* WorkOrderItem.swift in Sources */,
 				48C3FB67226B4EA100668BCB /* ShopCartCell.swift in Sources */,
-				48C3FB2B226B3E8E00668BCB /* SecondViewController.swift in Sources */,
+				48F0B65222B8849F00C976BB /* OrderRecordController.swift in Sources */,
+				48EB1A6E238C381D00AC7E69 /* SearchTableViewCell.swift in Sources */,
+				48F0B65822B8986300C976BB /* SalesOredrDetailViewController.swift in Sources */,
+				486207C82282A6EF006FCA1E /* TabBarController.swift in Sources */,
+				48088B7022828BB6003ECB87 /* RouletteViewController.swift in Sources */,
+				48EAACCF234CD0EE00E6BD29 /* RestaurantCell.swift in Sources */,
+				48E4F15022CB257900D879CE /* LoginController.swift in Sources */,
+				48F0B65422B884C000C976BB /* OrderRecordCell.swift in Sources */,
+				48F0B65A22B89BE600C976BB /* OrderItemCell.swift in Sources */,
 				485DE32E2272B655008B63CB /* RestaurantInfo.swift in Sources */,
-				48C3FB5B226B49C800668BCB /* RestaurantTableViewController.swift in Sources */,
-				485DE32C2272AFC2008B63CB /* RestaurantModel.swift in Sources */,
 				48C3FB27226B3E8E00668BCB /* AppDelegate.swift in Sources */,
-				48C3FB65226B4C9E00668BCB /* ShopCart.swift in Sources */,
-				48C3FB61226B4C0900668BCB /* ShopCartTableViewController.swift in Sources */,
-				48C3FB57226B427A00668BCB /* Order.swift in Sources */,
-				48C3FB29226B3E8E00668BCB /* FirstViewController.swift in Sources */,
+				48EE6B3F22E6F05C00B2C32D /* MemberController.swift in Sources */,
+				48CE4ABB2309140F0000831D /* Restaurant_model.swift in Sources */,
+				48C3FB65226B4C9E00668BCB /* Cart.swift in Sources */,
+				48EAACCC234CD01800E6BD29 /* RestaurantViewController.swift in Sources */,
+				48F0B65622B889AE00C976BB /* OrderRecord .swift in Sources */,
+				48EBC722238ACE4400DE3904 /* SignupViewController.swift in Sources */,
+				48EED51B237921B90065541D /* MemberCell.swift in Sources */,
+				48E8B6E222BE100B00FA4A2F /* OrderHeader.swift in Sources */,
+				48EE7F36236FC5B0004634B2 /* MemberData.swift in Sources */,
+				48EF82E522AF501500AF9919 /* Meal.swift in Sources */,
+				48C3FB57226B427A00668BCB /* SalesOrder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -637,7 +802,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CyutOrderSystem/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -655,7 +822,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CyutOrderSystem/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

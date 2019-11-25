@@ -8,7 +8,8 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class RouletteViewController
+: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

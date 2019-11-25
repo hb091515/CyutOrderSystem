@@ -9,6 +9,12 @@ target 'CyutOrderSystem' do
     pod 'Alamofire', '~> 5.0.0-beta.5'
     pod 'Kingfisher', '~> 5.0'
     pod 'SwiftyJSON', '~> 4.0'
+    pod 'Firebase/Core'
+    pod 'Firebase/Database'
+    pod 'Firebase/Auth'
+    pod 'XLPagerTabStrip', '~> 9.0'
+    pod 'TextFieldEffects'
+
 
   target 'CyutOrderSystemTests' do
     inherit! :search_paths
