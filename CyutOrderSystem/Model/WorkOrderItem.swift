@@ -10,6 +10,8 @@ import Foundation
 
 struct workorderitem {
     
+    var imageurl : String
+    
     var name : String
     
     var quantity : Int

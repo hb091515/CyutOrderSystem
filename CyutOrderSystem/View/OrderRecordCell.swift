@@ -10,10 +10,12 @@ import UIKit
 
 class OrderRecordCell: UITableViewCell {
 
+    @IBOutlet weak var checkimage: UIImageView!
     @IBOutlet weak var orderNoLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var costLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         layoutMargins = UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 0)

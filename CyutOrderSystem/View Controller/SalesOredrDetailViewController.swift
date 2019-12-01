@@ -63,7 +63,7 @@ class SalesOredrDetailViewController: UIViewController {
                 case .success(let value):
                     let json = JSON(value)
                     for i in 0..<(json["lines"].count){
-                        let item = workorderitem(name: json["lines"][i]["item"]["name"].stringValue, quantity: json["lines"][i]["quantity"].intValue, price: json["lines"][i]["item"]["price"].intValue, state: json["state"].stringValue)
+                        let item = workorderitem(imageurl: json["lines"][i]["item"]["imgName"].stringValue ,name: json["lines"][i]["item"]["name"].stringValue, quantity: json["lines"][i]["quantity"].intValue, price: json["lines"][i]["item"]["price"].intValue, state: json["state"].stringValue)
                         self.workitem.append(item)
                     }
                     self.tbView.reloadData()
@@ -104,14 +104,21 @@ extension SalesOredrDetailViewController: UITableViewDelegate, UITableViewDataSo
         
         
         let workline = workitem[indexPath.row]
+        let url = URL(string: "http://163.17.9.46:8181/improject/resources/img/\(workline.imageurl)")
+        cell.mealimage.kf.setImage(with: url)
         cell.mealNameLabel.text = workline.name
         cell.mealquantity.text = "x\(String(workline.quantity))"
         cell.mealpriceLabel.text = "NT$ \(String(workline.price))"
         cell.subtotalLabel.text = "NT$ \(String(workline.quantity*workline.price))"
-        if workline.state == "未開工"{
-            cell.statusLabel.text = "🔴"
+        if workline.state == "備餐中"{
+            cell.statusLabel.text = "備餐中"
+            cell.statusLabel.textColor = UIColor.orange
         }else if workline.state == "完成"{
             cell.statusLabel.text = "完成"
+            cell.statusLabel.textColor = UIColor.green
+        }else if workline.state == "待取餐"{
+            cell.statusLabel.text = "帶取餐"
+            cell.statusLabel.textColor = UIColor.red
         }
         return cell
 }

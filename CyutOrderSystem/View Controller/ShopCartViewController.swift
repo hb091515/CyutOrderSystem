@@ -40,22 +40,28 @@ class ShopCartViewController: UIViewController {
             for i in 0..<(self.cart!.items.count) {
                 self.order.lines.append(orderline.init(item: item.init(id: self.cart?.items[i].meal.id, quantity: self.cart?.items[i].quantity)))
             }
+
+            
             //post訂單資料
-            AF.request("http://163.17.9.46:8181/improject/rest/orders/so/post", method: .post ,parameters:  self.order.ToDict(),encoding: JSONEncoding.default).validate().responseJSON{ response in
+            AF.request("http://163.17.9.46:8181/improject/rest/orders/so/post", method: .post ,parameters: self.order.ToDict(),encoding: JSONEncoding.default).validate().responseJSON{ response in
                 switch response.result{
-                case .success( _):
+                case .success(_):
                     print(response.result)
                     let alertcontroller = UIAlertController(title: "送出成功", message: "", preferredStyle: .alert)
                     let okbtn = UIAlertAction(title: "OK", style: .default){ (_) in
-                        
                     }
                     alertcontroller.addAction(okbtn)
                     self.present(alertcontroller, animated: true, completion: nil)
+                    break
                 case .failure(let error):
                     print(error.localizedDescription)
+                    break
                 }
             }
-                        
+            
+            
+            
+            
             self.cart?.items.removeAll()
             self.tableView.reloadData()
             self.totalLable.text = "NT$ "+(self.cart?.total.description)!

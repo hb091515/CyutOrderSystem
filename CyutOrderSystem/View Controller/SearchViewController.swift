@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import Kingfisher
 
 class SearchViewController: UITableViewController, UISearchResultsUpdating {
     
@@ -18,6 +19,8 @@ class SearchViewController: UITableViewController, UISearchResultsUpdating {
     
     var searchResult : [meal] = []
 
+    fileprivate var cart = Cart()
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,14 +29,15 @@ class SearchViewController: UITableViewController, UISearchResultsUpdating {
         
         searchController = UISearchController(searchResultsController: nil)
         searchController.searchResultsUpdater = self
-        navigationItem.hidesSearchBarWhenScrolling = false
+        searchController.dimsBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "請輸入餐點名稱"
+
 
         navigationItem.searchController = searchController
         definesPresentationContext = true
         navigationController?.navigationBar.prefersLargeTitles = true
-
-
-
+        navigationItem.hidesSearchBarWhenScrolling = false
+        
         }
     
     func getmealdata() {
@@ -42,7 +46,7 @@ class SearchViewController: UITableViewController, UISearchResultsUpdating {
                 case .success(let value):
                     let json = JSON(value)
                     for (_, subJson) in json {
-                        let data = meal(id: subJson["id"].intValue, name: subJson["name"].stringValue, price: subJson["price"].intValue)
+                        let data = meal(imageurl: subJson["imgName"].stringValue,id: subJson["id"].intValue, name: subJson["name"].stringValue, price: subJson["price"].intValue)
                         self.mealdata.append(data)
                     }
                     self.tableView.reloadData()
@@ -79,9 +83,13 @@ class SearchViewController: UITableViewController, UISearchResultsUpdating {
         let cell = tableView.dequeueReusableCell(withIdentifier: "searchCell", for: indexPath)as! SearchTableViewCell
 
         if navigationItem.searchController?.isActive == true {
+            let url = URL(string: "http://163.17.9.46:8181/improject/resources/img/\(searchResult[indexPath.row].imageurl)")
+            cell.mealimage.kf.setImage(with: url)
             cell.mealname.text = searchResult[indexPath.row].name
             cell.mealcost.text = "NT$ \(String(searchResult[indexPath.row].price))"
         }else {
+            let url = URL(string: "http://163.17.9.46:8181/improject/resources/img/\(mealdata[indexPath.row].imageurl)")
+            cell.mealimage.kf.setImage(with: url)
             cell.mealname.text = mealdata[indexPath.row].name
             cell.mealcost.text = "NT$ \(String(mealdata[indexPath.row].price))"
         }
@@ -89,15 +97,22 @@ class SearchViewController: UITableViewController, UISearchResultsUpdating {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        var object :AnyObject?
+        
+        if navigationItem.searchController?.isActive == true {
+            tableView.deselectRow(at: indexPath, animated: true)
+            object = searchResult[indexPath.row] as AnyObject
+            print(object!)
+        }
+        else {
+            object = self.mealdata[indexPath.row] as AnyObject
+            tableView.deselectRow(at: indexPath, animated: true)
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+        }
     }
-    */
-
+    
+    
     /*
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {

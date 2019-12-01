@@ -13,9 +13,13 @@ import SwiftyJSON
 
 class SignupViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,UITextFieldDelegate {
     
-    var tint = ["Email","Password","Name","CellPhone"]
+    var tint = ["學校信箱Email","密碼Password","名字Name","電話CellPhone"]
     
     var auth = member()
+    
+    var textfieldtag = 0
+    
+    var index : IndexPath?
     
     @IBOutlet weak var tableview: UITableView!
     //註冊送出
@@ -34,43 +38,60 @@ class SignupViewController: UIViewController,UITableViewDelegate,UITableViewData
             let namecell = self.tableview.cellForRow(at: nameindex as IndexPath)as! SignupTableViewCell
             let cellphonecell = self.tableview.cellForRow(at: Cellphoneindex as IndexPath)as! SignupTableViewCell
             
-            self.auth = member(id: emailcell.textfield.text, password: passwordcell.textfield.text, student: detail(email: emailcell.textfield.text, name: namecell.textfield.text, phoneNumber: cellphonecell.textfield.text), userId: emailcell.textfield.text)
+            let id = emailcell.textfield.text?.split(separator: "@")[0]
+            print(id!)
             
-            if !self.auth.id!.isEmpty && !self.auth.password!.isEmpty && !(self.auth.student?.email!.isEmpty)! && !(self.auth.student?.name!.isEmpty)! && !(self.auth.student?.phoneNumber!.isEmpty)! {
+            self.auth = member(id: String(id!), password: passwordcell.textfield.text, student: detail(email: emailcell.textfield.text, name: namecell.textfield.text, phoneNumber: cellphonecell.textfield.text), userId: emailcell.textfield.text)
+            
+            //驗證格式
+            //欄位不是空的
+            if !(self.auth.id!.isEmpty) && (!self.auth.password!.isEmpty) && !(self.auth.student?.email!.isEmpty)! && !(self.auth.student?.name!.isEmpty)! && !(self.auth.student?.phoneNumber!.isEmpty)! {
                 
-                //post會員資料
-                AF.request("http://163.17.9.46:8181/improject/rest/users/post", method: .post, parameters: self.auth.ToDict(), encoding: JSONEncoding.default).validate().response{ response in
-                    switch response.result{
-                    case .success(_):
-                        Auth.auth().createUser(withEmail: (self.auth.student?.email)!, password: self.auth.password!, completion: nil)
-                        let okalert = UIAlertController(title: "註冊成功", message: nil, preferredStyle: .alert)
-                        let okbtn = UIAlertAction(title: "OK", style: .default){(_) in
-                            self.dismiss(animated: true, completion:nil)
+                if (self.isValidEmail(emailStr: emailcell.textfield.text!) != false) && (self.isValidphone(cellphone: cellphonecell.textfield.text!) != false){
+                    
+                    if passwordcell.textfield.text!.count > 6 {
+                        //post會員資料
+                        AF.request("http://163.17.9.46:8181/improject/rest/users/post", method: .post, parameters: self.auth.ToDict(), encoding: JSONEncoding.default).validate().response{ response in
+                            switch response.result{
+                            case .success(_):
+                                Auth.auth().createUser(withEmail: (self.auth.student?.email)!, password: self.auth.password!, completion: { (user, error) in
+                                    if error == nil {
+                                        let alert = UIAlertController(title: "註冊成功", message: "", preferredStyle: .alert)
+                                        let okbtn = UIAlertAction(title: "確認", style: .default){(_) in
+                                        self.dismiss(animated: true, completion: nil)
+                                        }
+                                        alert.addAction(okbtn)
+                                        self.present(alert, animated: true, completion: nil)
+                                    }
+
+                                })
+                            case .failure(_):
+                                let failalert = UIAlertController(title: "註冊失敗!!", message: nil, preferredStyle: .alert)
+                                let failbtn = UIAlertAction(title: "確認", style: .default, handler: nil)
+                                failalert.addAction(failbtn)
+                                self.present(failalert, animated: true, completion: nil)
+                            }
                         }
-                        okalert.addAction(okbtn)
-                        self.present(okalert, animated: true, completion: nil)
-                    case .failure(_):
-                        let failalert = UIAlertController(title: "註冊失敗", message: nil, preferredStyle: .alert)
+                    }else{
+                        let alert = UIAlertController(title: "註冊失敗!!", message: "密碼格式必須大於6字元", preferredStyle: .alert)
                         let failbtn = UIAlertAction(title: "確認", style: .default, handler: nil)
-                        failalert.addAction(failbtn)
-                        self.present(failalert, animated: true, completion: nil)
+                        alert.addAction(failbtn)
+                        self.present(alert, animated: true, completion: nil)
                     }
+                    
+                }else {
+                    let alert = UIAlertController(title: "註冊失敗!!", message: "欄位資料格式錯誤", preferredStyle: .alert)
+                    let failbtn = UIAlertAction(title: "確認", style: .default, handler: nil)
+                    alert.addAction(failbtn)
+                    self.present(alert, animated: true, completion: nil)
                 }
-                
+            //欄位有空的話
             }else {
-                let checkalert = UIAlertController(title: "錯誤!!", message: "欄位資料有異", preferredStyle: .alert)
-                let checkbtn = UIAlertAction(title: "確認", style: .default, handler: nil)
-                
-                checkalert.addAction(checkbtn)
-                self.present(checkalert, animated: true, completion: nil)
+                let failalert = UIAlertController(title: "註冊失敗!!", message: "欄位上有未填入資料", preferredStyle: .alert)
+                let failbtn = UIAlertAction(title: "確認", style: .default, handler: nil)
+                failalert.addAction(failbtn)
+                self.present(failalert, animated: true, completion: nil)
             }
-            
-            
-            //post 會員資料
-                
-            
-            
-            
         }
         
         let cancel = UIAlertAction(title: "取消", style: .cancel, handler: nil)
@@ -79,11 +100,46 @@ class SignupViewController: UIViewController,UITableViewDelegate,UITableViewData
         alertcontorller.addAction(cancel)
         
         present(alertcontorller, animated: true, completion: nil)
-
-        
-        
-        
     }
+    
+    //信箱格式
+     func isValidEmail(emailStr:String) -> Bool {
+        let emailRegEx = "s+[0-9]+@gm.cyut.edu.tw"
+
+        let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        return emailPred.evaluate(with: emailStr)
+    }
+    //電話格式
+    func isValidphone(cellphone:String) -> Bool {
+        let cellphoneRegEx = "09+[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]"
+        
+        let cellphonePred = NSPredicate(format: "SELF MATCHES %@", cellphoneRegEx)
+        return cellphonePred.evaluate(with: cellphone)
+    }
+    
+    //限制字數
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        if textField.placeholder == "密碼Password" {
+            let countOfWords = string.count + textField.text!.count - range.length
+
+           if  countOfWords > 16 {
+               return false
+           }
+            
+        }else if textField.placeholder == "電話CellPhone" {
+            
+            let countOfWords = string.count + textField.text!.count - range.length
+
+            if  countOfWords > 10 {
+                return false
+            }
+        }
+        
+        return true
+
+    }
+    
     
     @IBOutlet weak var signupbutton: UIButton!{
         didSet{
@@ -112,16 +168,6 @@ class SignupViewController: UIViewController,UITableViewDelegate,UITableViewData
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -136,12 +182,17 @@ class SignupViewController: UIViewController,UITableViewDelegate,UITableViewData
         
         cell.textfield.placeholder = tint[indexPath.row]
         
-        if indexPath.row == 1{
+        if indexPath.row == 0{
+            cell.textfield.keyboardType = .emailAddress
+        }else if indexPath.row == 1 {
+            cell.textfield.delegate = self
             cell.textfield.isSecureTextEntry = true
+        }else if indexPath.row == 3 {
+            cell.textfield.delegate = self
+            cell.textfield.textContentType = .telephoneNumber
         }
         
         return cell
      }
-
 
 }

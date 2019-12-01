@@ -13,7 +13,7 @@ class SignupTableViewCell: UITableViewCell {
     @IBOutlet weak var textfield: UITextField!{
         didSet{
             textfield.borderStyle = .none
-            textfield.font = UIFont(name: "Arial", size: 22)
+            textfield.font = UIFont(name: "Arial", size: 18)
         }
     }
     

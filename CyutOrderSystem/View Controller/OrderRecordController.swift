@@ -10,6 +10,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 import Firebase
+import UserNotifications
 
 class OrderRecordController: UITableViewController {
 
@@ -17,6 +18,9 @@ class OrderRecordController: UITableViewController {
 
     var index : IndexPath?
     
+    
+    
+
     
     @IBOutlet weak var segment: UISegmentedControl!
     
@@ -34,7 +38,7 @@ class OrderRecordController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
+        
 
 
         getOrderDetail()
@@ -55,7 +59,7 @@ class OrderRecordController: UITableViewController {
             case .success(let value):
                 let json = JSON(value)
                 for (_, subJson) in json {
-                    var data = orderrecord(orderNo: subJson["orderNo"].intValue, orderTime: subJson["orderTime"].stringValue, customerName: subJson["customerName"].stringValue, email: subJson["email"].stringValue, phoneNumber: subJson["phoneNumber"].stringValue, total: subJson["total"].intValue, workorderno: [])
+                    var data = orderrecord(orderNo: subJson["orderNo"].intValue, orderTime: subJson["orderTime"].stringValue, customerName: subJson["customerName"].stringValue, email: subJson["email"].stringValue, phoneNumber: subJson["phoneNumber"].stringValue, total: subJson["total"].intValue, salesOrderState: subJson["salesOrderState"].stringValue, workorderno: [])
                     for i in 0..<subJson["lines"].count{
                         if !data.workorderno.contains(subJson["lines"][i]["item"]["supplier"]["name"].stringValue){
                             data.workorderno.append(subJson["lines"][i]["item"]["supplier"]["name"].stringValue)
@@ -73,7 +77,26 @@ class OrderRecordController: UITableViewController {
         }
     }
     
-    
+    func prepareNotification() {
+        
+        let content = UNMutableNotificationContent()
+        
+        var ordernumber = ""
+        for i in record {
+            if i.salesOrderState == "完成" {
+                ordernumber = String(i.orderNo)
+            }
+        }
+        content.title = "訂單完成"
+        content.subtitle = "編號\(ordernumber)訂單已完成"
+        content.body = "請前往取餐"
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 2, repeats: false)
+        
+        let request = UNNotificationRequest(identifier: "cyutfood", content: content, trigger: trigger)
+        
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+    }
     
     
     
@@ -123,7 +146,15 @@ class OrderRecordController: UITableViewController {
         cell.costLabel.text = "NT$ \(orderline.total)"
         cell.timeLabel.text = "\(orderline.orderTime[time])"
         cell.dateLabel.text = "\(date)"
-            
+        
+        if orderline.salesOrderState == "未完成" {
+            cell.checkimage.image = nil
+        }else if orderline.salesOrderState == "完成" {
+            cell.checkimage.image = UIImage(named: "checkmark")
+            prepareNotification()
+        }
+        
+        
         
         cell.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
         cell.layer.borderColor = UIColor.orange.cgColor

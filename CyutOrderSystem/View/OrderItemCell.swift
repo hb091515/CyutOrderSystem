@@ -15,6 +15,7 @@ class OrderItemCell: UITableViewCell {
     @IBOutlet weak var mealpriceLabel: UILabel!
     @IBOutlet weak var subtotalLabel: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
+    @IBOutlet weak var mealimage: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

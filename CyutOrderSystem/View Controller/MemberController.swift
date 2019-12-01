@@ -86,7 +86,7 @@ class MemberController: UIViewController,UITableViewDelegate,UITableViewDataSour
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0 {
-            let passwordalert = UIAlertController(title: "忘記密碼", message: "確定要更改密碼?\n我們將會發送更改密碼的信件給您。", preferredStyle: .alert)
+            let passwordalert = UIAlertController(title: "更改密碼", message: "確定要更改密碼?\n我們將會發送更改密碼的信件給您。", preferredStyle: .alert)
             let OKAction = UIAlertAction(title: "送出", style: .default) { (action) in
                 self.sendPasswordReset(withEmail: self.name.text!)
                 let OKalert = UIAlertController(title: "已發送信件", message: nil, preferredStyle: .alert)

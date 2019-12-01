@@ -9,7 +9,7 @@
 import UIKit
 
 class SearchTableViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var mealimage: UIImageView!
     @IBOutlet weak var mealname: UILabel!
     @IBOutlet weak var mealcost: UILabel!
@@ -23,5 +23,5 @@ class SearchTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
 }

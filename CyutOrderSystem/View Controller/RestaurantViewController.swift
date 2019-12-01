@@ -10,9 +10,10 @@ import UIKit
 
 class RestaurantViewController: UIViewController,UITableViewDataSource,UITableViewDelegate{
     
-    let food = [restaurant(title: "一餐", image: ["restaurant1","restaurant2","restaurant3","restaurant4"], name: ["lslo","eijr","eret","orprl"], type: ["coffee","tea","coelkt","elrmt"]),restaurant(title: "二餐", image: ["restaurant5","restaurant6","restaurant7","restaurant8"], name: ["太初","認識","拉馬","隨便"], type: ["cofa","candy","noodle","orplt"]),restaurant(title: "三餐", image: ["restaurant9","restaurant10","restaurant11","restaurant12"], name: ["仙炙軒","湖庭","帕戈義大利餐廳","望湘園"], type: ["coffee","甜點 蛋糕","義大利麵","海鮮"])]
+    let food = [restaurant(title: "一餐", image: ["restaurant1","restaurant2","restaurant3","restaurant4"], name: ["古巴大叔","無堂","B1brekky","星品輕食"], type: ["三明治","熱壓吐司","早午餐","下午茶"]),restaurant(title: "二餐", image: ["restaurant5","restaurant6","restaurant7","restaurant8"], name: ["smile微笑","飪室","拉馬","Heynuts堅果咖啡"], type: ["早餐","咖哩","麵食","coffee"]),restaurant(title: "三餐", image: ["restaurant9","restaurant10","restaurant11","restaurant12"], name: ["仙炙軒","湖庭","帕戈義大利餐廳","望湘園"], type: ["燒烤","甜點 蛋糕","義大利麵","海鮮"])]
     
     var index: IndexPath?
+    
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -74,17 +75,10 @@ class RestaurantViewController: UIViewController,UITableViewDataSource,UITableVi
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        index = self.tableView.indexPathForSelectedRow
         let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)as! RestaurantCell
         cell.selectedBackgroundView?.backgroundColor = .white
         tableView.deselectRow(at: indexPath, animated: true)
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "restinfo" {
-            let controller = segue.destination as! RestaurantInfo
-            
-            }
-    }
-    
     
 }

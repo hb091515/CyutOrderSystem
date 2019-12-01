@@ -79,18 +79,11 @@ class RestaurantCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewD
         
         return cell
     }
-    
-    
    
     //點擊事件
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let iPath = self.collectionView.indexPathsForSelectedItems
-        let indexPath : NSIndexPath = iPath![0] as NSIndexPath
-        let rowIndex = indexPath.row
-        print("row index = \(rowIndex)")
         firstViewController()?.performSegue(withIdentifier: "restinfo", sender: nil)
     }
-    
     
     override func draw(_ rect: CGRect) {
         //線寬
@@ -140,3 +133,4 @@ extension UIView{
         return nil
     }
 }
+

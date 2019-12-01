@@ -9,18 +9,19 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import Kingfisher
 
 class RestaurantInfo: UITableViewController {
     
     @IBOutlet weak var img: UIImageView!
-    
+        
     func alamofiremeal() {
           AF.request("http://163.17.9.46:8181/improject/rest/dishes/", method: .get).validate().responseJSON { response in
               switch response.result {
               case .success(let value):
                   let json = JSON(value)
                   for (_, subJson) in json {
-                      let data = meal(id: subJson["id"].intValue, name: subJson["name"].stringValue, price: subJson["price"].intValue)
+                    let data = meal(imageurl: subJson["imgName"].stringValue ,id: subJson["id"].intValue, name: subJson["name"].stringValue, price: subJson["price"].intValue)
                       self.mealData.append(data)
                   }
                   self.tableView.reloadData()
@@ -33,15 +34,13 @@ class RestaurantInfo: UITableViewController {
     
     
     var mealData :[meal] = []
-    
-    var mealImage = ["meal1","meal2","meal3","meal4","meal5","meal6"]
-    
+        
     fileprivate var cart = Cart()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        img.image = UIImage(named: "restaurant2")
+        img.image = UIImage(named: "orderhere")
 
         alamofiremeal()
         self.tableView.showsVerticalScrollIndicator = false
@@ -61,11 +60,6 @@ class RestaurantInfo: UITableViewController {
     }
     
     
-    
-  
-
-    // MARK: - Table view data source
-
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -86,7 +80,8 @@ class RestaurantInfo: UITableViewController {
         cell.delegate = self
         cell.mealNameLabel.text = product.name
         cell.costLabel.text = "$"+product.displayPrice()
-        //cell.mealImage.image = UIImage(named: mealImage[indexPath.row])
+        let url = URL(string: "http://163.17.9.46:8181/improject/resources/img/\(mealData[indexPath.row].imageurl)")
+        cell.mealImage.kf.setImage(with: url)
         
         cell.setButton(state: self.cart.contains(meal: product))
         return cell
@@ -95,11 +90,7 @@ class RestaurantInfo: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     
-
     }
-    
-
-
     
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation

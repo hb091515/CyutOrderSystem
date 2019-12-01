@@ -11,6 +11,7 @@ import UIKit
 protocol CartItemDelegate {
     func updateCartItem(cell: ShopCartCell, quantity: Int)
 }
+
 class ShopCartCell: UITableViewCell {
 
     @IBOutlet weak var cartName: UILabel!

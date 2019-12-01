@@ -22,5 +22,7 @@ struct orderrecord: Codable {
     
     var total : Int
     
+    var salesOrderState : String
+    
     var workorderno : [String] = []
 }

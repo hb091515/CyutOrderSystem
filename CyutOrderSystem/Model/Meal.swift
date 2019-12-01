@@ -7,8 +7,10 @@
 //
 
 import Foundation
+import Kingfisher
 
 struct meal: Codable, Equatable {
+    var imageurl : String
     var id : Int
     var name : String
     var price : Int
@@ -17,7 +19,7 @@ struct meal: Codable, Equatable {
 extension meal {
     //判斷有無重複加入
     static func == (lhs: meal, rhs: meal) -> Bool{
-        return lhs.name == rhs.name && lhs.price == rhs.price && lhs.id == rhs.id
+        return lhs.imageurl == rhs.imageurl && lhs.name == rhs.name && lhs.price == rhs.price && lhs.id == rhs.id
     }
     
     func displayPrice() -> String {
