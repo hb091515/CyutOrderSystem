@@ -845,7 +845,7 @@
                 <navigationController id="dUH-Fc-nve" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="餐廳" image="Restaurant" id="Ghe-al-Agx"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="1f8-jI-NCp">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="109"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="114"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" type="system" pointSize="24"/>

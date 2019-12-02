@@ -15,25 +15,14 @@ class RestaurantInfo: UITableViewController {
     
     @IBOutlet weak var img: UIImageView!
         
-    func alamofiremeal() {
-          AF.request("http://163.17.9.46:8181/improject/rest/dishes/", method: .get).validate().responseJSON { response in
-              switch response.result {
-              case .success(let value):
-                  let json = JSON(value)
-                  for (_, subJson) in json {
-                    let data = meal(imageurl: subJson["imgName"].stringValue ,id: subJson["id"].intValue, name: subJson["name"].stringValue, price: subJson["price"].intValue)
-                      self.mealData.append(data)
-                  }
-                  self.tableView.reloadData()
-              case .failure(let error):
-                  print(error.localizedDescription)
-              }
-
-      }
-      }
+    @IBOutlet weak var segmentrest: UISegmentedControl!
     
+    @IBAction func segment(_ sender: UISegmentedControl) {
+        
+    }
     
     var mealData :[meal] = []
+    
         
     fileprivate var cart = Cart()
 
@@ -45,6 +34,23 @@ class RestaurantInfo: UITableViewController {
         alamofiremeal()
         self.tableView.showsVerticalScrollIndicator = false
 
+    }
+    
+    func alamofiremeal() {
+        AF.request("http://163.17.9.46:8181/improject/rest/dishes/", method: .get).validate().responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                let json = JSON(value)
+                for (_, subJson) in json {
+                  let data = meal(imageurl: subJson["imgName"].stringValue ,id: subJson["id"].intValue, name: subJson["name"].stringValue, price: subJson["price"].intValue)
+                    self.mealData.append(data)
+                }
+                self.tableView.reloadData()
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+
+    }
     }
     
     override func didReceiveMemoryWarning() {
@@ -66,7 +72,6 @@ class RestaurantInfo: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return mealData.count
     }
 
@@ -74,9 +79,8 @@ class RestaurantInfo: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "mealcell", for: indexPath) as! RestaurantInfoCell
         
-        // Configure the cell...
         let product = mealData[indexPath.row]
-        
+
         cell.delegate = self
         cell.mealNameLabel.text = product.name
         cell.costLabel.text = "$"+product.displayPrice()
@@ -84,7 +88,9 @@ class RestaurantInfo: UITableViewController {
         cell.mealImage.kf.setImage(with: url)
         
         cell.setButton(state: self.cart.contains(meal: product))
+        
         return cell
+
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -101,12 +107,9 @@ class RestaurantInfo: UITableViewController {
                 cartViewController.cart = self.cart
             }
         }
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
- 
-
 }
+
 extension RestaurantInfo: CartDelegate {
     
     // MARK: - CartDelegate

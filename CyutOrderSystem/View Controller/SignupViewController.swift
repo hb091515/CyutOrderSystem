@@ -49,7 +49,7 @@ class SignupViewController: UIViewController,UITableViewDelegate,UITableViewData
                 
                 if (self.isValidEmail(emailStr: emailcell.textfield.text!) != false) && (self.isValidphone(cellphone: cellphonecell.textfield.text!) != false){
                     
-                    if passwordcell.textfield.text!.count > 6 {
+                    if passwordcell.textfield.text!.count >= 6 {
                         //post會員資料
                         AF.request("http://163.17.9.46:8181/improject/rest/users/post", method: .post, parameters: self.auth.ToDict(), encoding: JSONEncoding.default).validate().response{ response in
                             switch response.result{
@@ -134,6 +134,12 @@ class SignupViewController: UIViewController,UITableViewDelegate,UITableViewData
             if  countOfWords > 10 {
                 return false
             }
+        }else if textField.placeholder == "名字Name"{
+            let countOfWords = string.count + textField.text!.count - range.length
+
+                      if  countOfWords > 15 {
+                          return false
+                      }
         }
         
         return true
@@ -190,6 +196,8 @@ class SignupViewController: UIViewController,UITableViewDelegate,UITableViewData
         }else if indexPath.row == 3 {
             cell.textfield.delegate = self
             cell.textfield.textContentType = .telephoneNumber
+        }else if indexPath.row == 2 {
+            cell.textfield.delegate = self
         }
         
         return cell

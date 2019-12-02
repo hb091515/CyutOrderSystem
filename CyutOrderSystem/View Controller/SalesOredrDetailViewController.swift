@@ -74,7 +74,6 @@ class SalesOredrDetailViewController: UIViewController {
         }
     }
     
-
     /*
     // MARK: - Navigation
 
@@ -117,7 +116,7 @@ extension SalesOredrDetailViewController: UITableViewDelegate, UITableViewDataSo
             cell.statusLabel.text = "完成"
             cell.statusLabel.textColor = UIColor.green
         }else if workline.state == "待取餐"{
-            cell.statusLabel.text = "帶取餐"
+            cell.statusLabel.text = "待取餐"
             cell.statusLabel.textColor = UIColor.red
         }
         return cell

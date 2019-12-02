@@ -19,6 +19,7 @@ class LoginController: UIViewController {
     @IBOutlet weak var signUp: UIButton!
     
     var memberdata = firebasemember()
+        
     //忘記密碼按鈕
     @IBAction func forget(_ sender: Any) {
         let forgetalert = UIAlertController(title: "重設密碼", message: "請輸入忘記密碼的帳號信箱\n我們將會發送重置密碼的信件給您。", preferredStyle: .alert)
