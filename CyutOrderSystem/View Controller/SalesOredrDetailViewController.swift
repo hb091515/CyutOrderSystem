@@ -55,6 +55,28 @@ class SalesOredrDetailViewController: UIViewController {
         tbView.reloadData()
     }
     
+    func prepareNotification() {
+        
+        let content = UNMutableNotificationContent()
+        
+        var ordername = ""
+        for i in workitem {
+            if i.state == "待取餐" {
+                ordername = String(i.name)
+                content.title = "餐點已完成"
+                content.subtitle = "\(ordername) 餐點已完成"
+                content.body = "請前往取餐"
+            }
+        }
+        
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 2, repeats: false)
+        
+        let request = UNNotificationRequest(identifier: "cyutfood", content: content, trigger: trigger)
+        
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+    }
+    
     func workorder() {
         for i in 0..<(header.workorderno.count){
             AF.request("http://163.17.9.46:8181/improject/rest/orders/wo/\(self.header.orderNo!)0"+"\(i+1)",method: .get).validate().responseJSON(){
@@ -73,16 +95,6 @@ class SalesOredrDetailViewController: UIViewController {
             }
         }
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 
@@ -118,6 +130,7 @@ extension SalesOredrDetailViewController: UITableViewDelegate, UITableViewDataSo
         }else if workline.state == "待取餐"{
             cell.statusLabel.text = "待取餐"
             cell.statusLabel.textColor = UIColor.red
+            prepareNotification()
         }
         return cell
 }

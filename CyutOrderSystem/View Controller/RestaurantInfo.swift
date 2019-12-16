@@ -14,15 +14,10 @@ import Kingfisher
 class RestaurantInfo: UITableViewController {
     
     @IBOutlet weak var img: UIImageView!
-        
-    @IBOutlet weak var segmentrest: UISegmentedControl!
-    
-    @IBAction func segment(_ sender: UISegmentedControl) {
-        
-    }
     
     var mealData :[meal] = []
     
+
         
     fileprivate var cart = Cart()
 
@@ -31,10 +26,16 @@ class RestaurantInfo: UITableViewController {
         
         img.image = UIImage(named: "orderhere")
 
+
         alamofiremeal()
+  
+        
+        
+        
         self.tableView.showsVerticalScrollIndicator = false
 
     }
+    
     
     func alamofiremeal() {
         AF.request("http://163.17.9.46:8181/improject/rest/dishes/", method: .get).validate().responseJSON { response in
@@ -66,6 +67,8 @@ class RestaurantInfo: UITableViewController {
     }
     
     
+    
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -79,6 +82,7 @@ class RestaurantInfo: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "mealcell", for: indexPath) as! RestaurantInfoCell
         
+       
         let product = mealData[indexPath.row]
 
         cell.delegate = self
@@ -88,8 +92,8 @@ class RestaurantInfo: UITableViewController {
         cell.mealImage.kf.setImage(with: url)
         
         cell.setButton(state: self.cart.contains(meal: product))
-        
         return cell
+
 
     }
     
@@ -119,6 +123,7 @@ extension RestaurantInfo: CartDelegate {
         
         //更新購物車內商品
         cart.updateCart(with: product)
+        
         
 }
 

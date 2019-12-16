@@ -91,6 +91,8 @@ class ShopCartViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.tableView.showsVerticalScrollIndicator = false
+
         getauthdata()
         
         view_design()

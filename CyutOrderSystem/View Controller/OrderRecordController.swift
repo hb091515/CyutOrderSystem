@@ -89,7 +89,6 @@ class OrderRecordController: UITableViewController {
         }
         content.title = "訂單完成"
         content.subtitle = "編號\(ordernumber)訂單已完成"
-        content.body = "請前往取餐"
         
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 2, repeats: false)
         
@@ -151,7 +150,6 @@ class OrderRecordController: UITableViewController {
             cell.checkimage.image = nil
         }else if orderline.salesOrderState == "完成" {
             cell.checkimage.image = UIImage(named: "checkmark")
-            prepareNotification()
         }
         
         
